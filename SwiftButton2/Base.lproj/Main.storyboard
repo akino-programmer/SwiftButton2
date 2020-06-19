@@ -28,7 +28,7 @@
                                 <state key="normal" image="setting"/>
                                 <connections>
                                     <action selector="tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JhS-Uz-zId"/>
-                                    <segue destination="kuh-dd-pSQ" kind="presentation" id="5qr-K7-Fjf"/>
+                                    <segue destination="kuh-dd-pSQ" kind="presentation" modalTransitionStyle="flipHorizontal" id="5qr-K7-Fjf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,11 +48,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzF-PG-OVT">
-                                <rect key="frame" x="143" y="357" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="key"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="次の画面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RH-sy-yox">
                                 <rect key="frame" x="0.0" y="97" width="414" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -60,10 +55,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzF-PG-OVT">
+                                <rect key="frame" x="155" y="300" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="key"/>
+                                <connections>
+                                    <action selector="change:" destination="kuh-dd-pSQ" eventType="touchUpInside" id="qQy-3k-H74"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Uft-M7-3ju"/>
                     </view>
+                    <connections>
+                        <outlet property="changeLabel" destination="5RH-sy-yox" id="ObN-iK-2FF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfB-1D-FpA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
